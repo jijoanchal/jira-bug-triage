@@ -1,0 +1,25 @@
+{
+  "config": {},
+  "suites": [
+    {
+      "title": "login.spec.ts", "file": "login.spec.ts",
+      "specs": [],
+      "suites": [{
+        "title": "Login", "file": "login.spec.ts",
+        "specs": [
+          { "title": "valid user can sign in", "file": "login.spec.ts", "line": 12, "tests": [{
+              "projectName": "chromium", "status": "unexpected",
+              "results": [{ "status": "failed", "duration": 30500, "retry": 0,
+                "errors": [{ "message": "\u001b[31mTimeoutError\u001b[39m: locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Sign in' })", "stack": "at login.spec.ts:15:40", "snippet": "  13 |   await page.fill('#user','a');\n> 15 |   await page.getByRole('button',{name:'Sign in'}).click();" }],
+                "attachments": [{ "name": "screenshot", "contentType": "image/png", "path": "C:\\ci\\work\\test-results\\login-chromium\\test-failed-1.png" }] }] }] },
+          { "title": "invalid password shows error", "file": "login.spec.ts", "line": 30, "tests": [{
+              "projectName": "chromium", "status": "unexpected",
+              "results": [{ "status": "failed", "duration": 4200, "retry": 0,
+                "error": { "message": "Error: expect(locator).toHaveText(expected)\nExpected: 'Invalid credentials'\nReceived: ''", "stack": "at login.spec.ts:34:30" },
+                "attachments": [] }] }] },
+          { "title": "logout works", "file": "login.spec.ts", "line": 50, "tests": [{ "projectName": "chromium", "status": "expected", "results": [{ "status": "passed", "duration": 900 }] }] }
+        ] }]
+    }
+  ],
+  "stats": { "expected": 1, "unexpected": 2, "flaky": 0, "skipped": 0, "duration": 36000 }
+}
